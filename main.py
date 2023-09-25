@@ -64,3 +64,8 @@ if __name__ == "__main__":
     target_ip = input("Enter the target IP address: ")
 
     scan_for_vulnerabilities(target_ip)
+
+
+
+# to find range of IPs
+#nmap -SN -PE 192.168.198.129-140
