@@ -41,21 +41,14 @@ def scan_for_vulnerabilities(target_ip):
     for target_ip, scan_result in temp['scan'].items():
         print(f"Results for {target_ip}:")
         print(f"Host is up: {scan_result['status']['state']}")
-        
-        if 'osclass' in scan_result:
-            print("Operating System Information:")
-            for os_info in scan_result['osclass']:
-                print(f"  - OS Family: {os_info['osfamily']}")
-                print(f"  - OS Gen: {os_info['osgen']}")
-                print(f"  - OS Accuracy: {os_info['accuracy']}")
-                # Add more OS information fields if needed
-        
+
+        if 'osmatch' in scan_result:
+            print("Operating System Information:",scan_result['osmatch'][0]['name'])
+
         if 'tcp' in scan_result:
             print("Open Ports:")
             for port, port_info in scan_result['tcp'].items():
                 print(f"  - Port {port}: {port_info['name']} - {port_info['product']} - {port_info['version']}")
-
-        # Add more information as needed
 
         print("="*50)  # Separator between hosts
         
