@@ -56,10 +56,12 @@ def scan_for_vulnerabilities(target_ip):
 
 
 if __name__ == "__main__":
-    target_ip = input("Enter the target IP address: ")
+    print("Cisco model: {2}, {1} WAN slots, IOS {0}".format("2600XM", 2, 12.4))
+    #target_ip = input("Enter the target IP address: ")
 
-    scan_for_vulnerabilities(target_ip)
+    #scan_for_vulnerabilities(target_ip)
 
 
 # to find range of IPs
 # nmap -sN -PE 192.168.84.129-140
+#fsadfsf
