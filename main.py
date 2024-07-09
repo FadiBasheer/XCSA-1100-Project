@@ -37,7 +37,7 @@ def scan_for_vulnerabilities(target_ip):
     # Perform an Nmap scan on the target IP with specific scan arguments
     temp = nm.scan(target_ip, arguments='-sV -O -PE')
 
-    # Iterate over the hosts in the scan result and print information
+    # Iterate over the hosts in the scan result and print the information
     for target_ip, scan_result in temp['scan'].items():
         print(f"Results for {target_ip}:")
         print(f"Host is up: {scan_result['status']['state']}")
