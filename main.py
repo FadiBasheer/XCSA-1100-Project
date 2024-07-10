@@ -1,7 +1,7 @@
 # Import the nmap library for network scanning
 import nmap
 
-# Define a function to calculate the vulnerability score for a given scan result
+# Define a function to calculate the vulnerability score for a given scan results
 def calculate_vulnerability_score(scan_result):
     vulnerability_score = 0
 
